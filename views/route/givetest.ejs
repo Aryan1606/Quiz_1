@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/route/l8" method="POST">
+        <br>
+        <div class="container">
+    <div class="form-group">
+        <h2><label for="qa"> These are the Questions , write the correct Answer:- </label></h2>
+        <!-- <input type="text" required name="qa" id="qa" class="form-control"> -->
+      </div> 
+    <div class="form-group">
+      <label for="qq1"> <%= route.q1 %> </label>
+      <input type="text" required name="qq1" id="qq1" class="form-control">
+    </div>    
+    <div class="form-group">
+        <label for="qq2"> <%= route.q2 %> </label>
+        <input type="text" required name="qq2" id="qq2" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="qq3"> <%= route.q3 %> </label>
+        <input type="text" required name="qq3" id="qq3" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="qq4"> <%= route.q4 %> </label>
+        <input type="text" required name="qq4" id="qq4" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="qq5"> <%= route.q5 %> </label>
+        <input type="text" required name="qq5" id="qq5" class="form-control">
+      </div>
+      
+      <a href="/route/" class="btn btn-secondary">Cancel And Go Back</a>
+      <%= console.log('Creating Test') %>
+      
+      <button type="submit" class="btn btn-primary" value="submit">Save</button>
+      </div>
+    </form>
+</body>
+</html>
