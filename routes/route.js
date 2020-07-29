@@ -36,17 +36,17 @@ router.get('/createtest/:id', async(req,res)=>{
 
 router.get('/taketest/:id', async(req,res)=>{
   const route2 = await Route.findById(req.params.id)
+  const r2 = await Route2.find()
+  let z=r2.length
    console.log(route2.id)
    try{
   // const route = await Route2.findOne({})
-  const r2 = await Route2.find()
-  let z=r2.length
+  
+  
   // z=z-1
   let x=0
-  console.log(r2[x].id)
   console.log('Before taking test')
-  if (r2 == null) 
-  res.render('/')
+  console.log(r2[x].id)
   // let q=0
   for(;x<z;x++) 
   {
@@ -56,6 +56,12 @@ router.get('/taketest/:id', async(req,res)=>{
 }
   catch(e){
     console.log(e)
+    if (r2.id== undefined) {
+      console.log('No Test Available')
+      res.render('route/notest', { route2: route2, z: z })
+    
+    }
+    else
     res.render('route/login', {routes: new Route()})
    }
 })
@@ -73,6 +79,10 @@ router.get('/taketestnext/:id/:x/:z', async(req,res)=>{
   console.log('Current Index '+x)
   console.log('Person ID: Hit Again '+route2.id)
   console.log('We are trying to give another test, lets see what happens next')
+  if(z==0){
+    console.log('No Test Available')
+    res.render('route/notest', { route2: route2 ,x: x, z: z, r2: r2})
+  }
   if(x==z){
     console.log('All test over')
     res.render('route/final', { route2: route2 ,x: x, z: z, r2: r2})
