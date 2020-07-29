@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color:#AB9D9A;
+        }
+        
+        </style>
+</head>
+<body>
+  <div class="container mt-4" id="my-form">
+      <br>
+    <div class="btn btn-lg btn-info " style="color: black; background-color: rgba(255, 10, 0, 0.74);">Hello <%= route.person%>.</div>
+    <br>
+    <br>
+    <u><h2><div>Your Details:- </div></h2></u>
+    <br>
+    
+    <div><h3>E-Mail- <div class="btn btn-success"><%= route.email%></div></h3></div>
+    <div><h3>Name- <div class="btn btn-success"><%= route.username%></div></h3></div>
+    <br>
+  </div>
+     <br>
+     
+     <div class="container mt-5" id="my-form">
+         <br>
+        <strong><u><em>Click Here For=></em></u></strong> <a href="/route/taketest/<%= route.id%>"><h2 class="btn btn-lg btn-primary"  >  Take test</h2></a>
+        <br>
+        <div class="element"></div>
+        <br>
+        <strong><u><em>Click Here For=></em></u></strong> <a href="/" id="new-btn2"><button class="btn btn-primary "><h2 >Home Page</h2></button></a>
+        <br> 
+        <br>  
+</body>
+</html>

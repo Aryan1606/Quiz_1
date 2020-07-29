@@ -4,7 +4,9 @@ const mongoose = require('mongoose')
 // const createDomPurify = require('dompurify')
 // const { JSDOM } = require('jsdom')
 // const dompurify = createDomPurify(new JSDOM().window)
-
+mongoose.connect('mongodb+srv://KillSwiTch:Qwerty1234@cluster0.o8qjs.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority', {
+  useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
+})
 
 const articleSchema = new mongoose.Schema({
     person: {
@@ -50,3 +52,9 @@ const articleSchema = new mongoose.Schema({
 //   next()
 // })
 module.exports= mongoose.model('Article', articleSchema)
+
+
+// mongoose.connect('mongodb://localhost:27017/Quiz', {
+//   useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
+// })
+// mongodb+srv://KillSwiTch:Qwerty1234@cluster0.o8qjs.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority

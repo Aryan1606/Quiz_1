@@ -1,4 +1,21 @@
-<div class="container mt-4">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <title>Document</title>
+  <style>
+    .error2{
+      background: red;
+  color: #fff;
+  padding: 5px;
+  margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-4">
     <br>
   <div class="form-group">
     <label for="username">UserName</label>
@@ -8,7 +25,12 @@
     <label for="password">PassWord</label>
     <input type="text" required name="password" id="password" >
   </div>
-  
+  <%= console.log('Login') %>
+  <div id="error1" ></div>
   <a href="/" class="btn btn-secondary">Cancel</a>
   <button type="submit" class="btn btn-primary">Sign-In</button>
+  <br>
+  <br>
   </div>
+</body>
+</html>

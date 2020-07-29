@@ -5,40 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <title>Document</title>
+    <style>
+      .container{
+          background-color:#AB9D9A;
+      }
+      </style>
 </head>
 <body>
-    <form action="/route/l8" method="POST">
-        <br>
-        <div class="container">
+    <form action="/route/l6/<%= route2.id%>/<%= x %>/<%= z %>" method="POST">
+        
+    <div class="container">
     <div class="form-group">
-        <h2><label for="qa"> These are the Questions , write the correct Answer:- </label></h2>
-        <!-- <input type="text" required name="qa" id="qa" class="form-control"> -->
+      <br>
+      <u><sup> *Their are total <%= z %> Test available: </sup></u>
+      <h2><label for="qa"> These are the Questions , write the correct Answers:- </label></h2>
       </div> 
+      <div>*You are currently giving Test Number- <%= (x+1) %> </div>
+      <br>
     <div class="form-group">
-      <label for="qq1"> <%= route.q1 %> </label>
+      <label for="qq1"> <%= r2[x].q1 %> </label>
       <input type="text" required name="qq1" id="qq1" class="form-control">
     </div>    
     <div class="form-group">
-        <label for="qq2"> <%= route.q2 %> </label>
+        <label for="qq2"> <%= r2[x].q2 %> </label>
         <input type="text" required name="qq2" id="qq2" class="form-control">
       </div>
       <div class="form-group">
-        <label for="qq3"> <%= route.q3 %> </label>
+        <label for="qq3"> <%= r2[x].q3 %> </label>
         <input type="text" required name="qq3" id="qq3" class="form-control">
       </div>
       <div class="form-group">
-        <label for="qq4"> <%= route.q4 %> </label>
+        <label for="qq4"> <%= r2[x].q4 %> </label>
         <input type="text" required name="qq4" id="qq4" class="form-control">
       </div>
       <div class="form-group">
-        <label for="qq5"> <%= route.q5 %> </label>
+        <label for="qq5"> <%= r2[x].q5 %> </label>
         <input type="text" required name="qq5" id="qq5" class="form-control">
       </div>
       
-      <a href="/route/" class="btn btn-secondary">Cancel And Go Back</a>
-      <%= console.log('Creating Test') %>
-      
-      <button type="submit" class="btn btn-primary" value="submit">Save</button>
+
+      <a href="/route/<%= route2.id%>" class="btn btn-secondary">Abandon current Test And Go To Profile</a>
+      <%= console.log('Giving Test') %>
+      <button type="submit" class="btn btn-primary" value="submit">Save and Move to Next Test</button>
+      <br>
+      <br>
+      <div>Test Number: <%= (x+1) %> of <%= z%></div>
       </div>
     </form>
 </body>

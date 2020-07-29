@@ -4,13 +4,12 @@ const mongoose = require('mongoose')
 // const createDomPurify = require('dompurify')
 // const { JSDOM } = require('jsdom')
 // const dompurify = createDomPurify(new JSDOM().window)
-
+mongoose.connect('mongodb+srv://KillSwiTch:Qwerty1234@cluster0.o8qjs.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority', {
+  useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
+})
 
 const articleSchema2 = new mongoose.Schema({
-    un: {
-        type: String,
-        required: true
-      },
+    
       q1: {
       type: String,
       required: true
