@@ -1,8 +1,15 @@
 
     <br>
 <div class="form-group">
-  <label for="person">Are You a: Teacher / Student </label>
-  <input type="text" required name="person" id="person" class="form-control">
+  <u><h3>Are You a:</h3></u>
+  <input type="radio" required id="person" name="person" value="Teacher" > Teacher
+  <!-- <label for="person">Teacher</label><br> -->
+  <br>
+  <input type="radio" required id="person" name="person" value="Student" > Student
+  <!-- <label for="person2">Student</label><br> -->
+
+  <!-- <label for="person">Are You a: Teacher / Student </label>
+  <input type="text" required name="person" id="person" class="form-control"> -->
 </div>    
 <div class="form-group">
     <label for="email">E-Mail</label>
@@ -17,7 +24,7 @@
     <input type="text" required name="password" id="password" class="form-control">
   </div>
   <a href="/" class="btn btn-secondary">Cancel</a>
-  <%= console.log('save8') %>
+  <%= console.log('SignUp') %>
   
   <button type="submit" class="btn btn-primary" value="submit">Save</button>
   </div>

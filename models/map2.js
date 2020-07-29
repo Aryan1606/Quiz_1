@@ -7,10 +7,7 @@ const mongoose = require('mongoose')
 
 
 const articleSchema2 = new mongoose.Schema({
-    un: {
-        type: String,
-        required: true
-      },
+    
       q1: {
       type: String,
       required: true

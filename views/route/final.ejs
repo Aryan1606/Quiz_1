@@ -15,18 +15,14 @@
     <br>
     <div class="container">
         <div class="form-group">
-            <h2><label for="qa"> <u><%= r.username%>'s Result- </u> </label></h2> <h3> <%=v %> out of 5 </h3>
-            <!-- <input type="text" required name="qa" id="qa" class="form-control"> -->
+            <h2><u><%= route2.username%>:</u> You have given all the Tests. </h2>
+            <h3>Total Test:- <%=z %> </h3>
           </div>
           <br>
           <br>
-          <a href="/route/<%= r.id%>" class="btn btn-secondary btn-success">Profile Page</a>
+          <a href="/route/<%= route2.id%>" class="btn btn-secondary btn-success">Profile Page</a>
           <a href="/" class="btn btn-secondary">Home Page</a>
-          <a href="/route/taketestnext/<%= r.id%>/<%= x %>/<%= z %>" class="btn btn-secondary btn-success">   Next Test</a>
           <br>
-          <br>
-      <div> Test Number: <%= parseInt(x)+1 %> of <%= z%></div>
-      </div>
           <br>
           </div>
 </body>
