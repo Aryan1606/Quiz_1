@@ -12,5 +12,5 @@
  
  ## First Install "mongo" and "node" from web for Windows 10 to run this application
  * Open the source code folder for this website in your IDE (*prefer Visual Studio Code )
- * Open cmd and run <h5><b><b>"mongod"</b></b></h5>, to run mongdb client in the localhost.
+ * Open cmd and run <b><b>"mongod"</b></b>, to run mongdb client in the localhost.
  * When mongodb client runs , come back to the IDE and run the server.js file using <b>"node server.js"</b> , after which open the browser and run "localhost:4000"
